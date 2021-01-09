@@ -1,0 +1,53 @@
+{
+    "name": "gkideo/test",
+    "description": "Test package",
+    "keywords": ["test", "testing", "psr-3"],
+    "homepage": "https://github.com/gkideo/test",
+    "type": "library",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Grzegorz Kucharski",
+            "email": "gk@ideo.pl"
+        }
+    ],
+    "require": {
+        "php": ">=7.2",
+        "psr/log": "^1.0.1"
+    },
+    "require-dev": {
+        "elasticsearch/elasticsearch": "^7",
+        "graylog2/gelf-php": "^1.4.2",
+        "php-amqplib/php-amqplib": "~2.4",
+        "php-console/php-console": "^3.1.3",
+        "phpspec/prophecy": "^1.6.1",
+        "phpunit/phpunit": "^8.5",
+        "predis/predis": "^1.1",
+        "rollbar/rollbar": "^1.3",
+        "ruflin/elastica": ">=0.90 <7.0.1",
+        "swiftmailer/swiftmailer": "^5.3|^6.0",
+        "phpstan/phpstan": "^0.12.59"
+    },
+    "suggest": {
+        "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+        "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+        "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+        "elasticsearch/elasticsearch": "Allow sending log messages to an Elasticsearch server via official client",
+        "php-console/php-console": "Allow sending log messages to Google Chrome",
+        "ext-mbstring": "Allow to work properly with unicode symbols"
+    },
+    "autoload": {
+        "psr-4": {"Test\\": "src/Test"}
+    },
+    "autoload-dev": {
+        "psr-4": {"Test\\": "tests/Test"}
+    },
+    "provide": {
+        "psr/log-implementation": "1.0.0"
+    },
+    "config": {
+        "sort-packages": true,
+        "platform-check": false
+    },
+    "lock": false
+}
